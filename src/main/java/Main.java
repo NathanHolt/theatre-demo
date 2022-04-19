@@ -40,8 +40,20 @@ public class Main {
             price = 12.5;
         }
 
+        // I got this from Azzam
+        int sw  = (age > 10 && age < 100) ? 1 : -1;
 
-        //output the amount owed (money = double)
+        switch (sw) {
+            case 1:
+                System.out.println("between 10 and 100");
+            default:
+                break; // for -1
+        }
+
+        boolean test = (5 > 1) ? true : false;
+
+
+            //output the amount owed (money = double)
         System.out.println("You owe this much: " + numFor.format(price));
         //print out if they got a toy
 
