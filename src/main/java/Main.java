@@ -7,16 +7,11 @@ public class Main {
         NumberFormat numFor = NumberFormat.getCurrencyInstance();
         //create age int
         int age;
-        int num;
         double price;
         String extra = "";
 
         System.out.println("Please input your age");
         age = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.println("Input a number:");
-        num = scanner.nextInt();
         scanner.nextLine();
 
         // if check 1, age 10 and under
@@ -40,49 +35,15 @@ public class Main {
             price = 12.5;
         }
 
-        // I got this from Azzam
-        int sw  = (age > 10 && age < 100) ? 1 : -1;
-
-        switch (sw) {
-            case 1:
-                System.out.println("between 10 and 100");
-            default:
-                break; // for -1
-        }
-
-        boolean test = (5 > 1) ? true : false;
-
 
             //output the amount owed (money = double)
         System.out.println("You owe this much: " + numFor.format(price));
         //print out if they got a toy
 
-//        if(extra.equals("toy")) {
-//            System.out.println("You got a toy!");
-//        } else if (extra.equals("sticker")) {
-//            System.out.println("You got a sticker!");
-//        } else if (extra.equals("advil")) {
-//            System.out.println("You got a advil!");
-//        } else {
-//            System.out.println("No extra.");
-//        }
 
         switch (extra) {
             case "toy":
                 System.out.println("You got a toy!");
-                if (num == 1) {
-                    System.out.println(1);
-
-                    switch (age) {
-                        case 3:
-                            System.out.println("You are a toddler");
-                            break;
-                        default:
-                            System.out.println("NaN");
-                            break;
-                    }
-
-                }
                 break;
             case "sticker":
                 System.out.println("You got a sticker!");
