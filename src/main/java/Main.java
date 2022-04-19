@@ -7,11 +7,16 @@ public class Main {
         NumberFormat numFor = NumberFormat.getCurrencyInstance();
         //create age int
         int age;
+        int num;
         double price;
         String extra = "";
 
         System.out.println("Please input your age");
         age = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Input a number:");
+        num = scanner.nextInt();
         scanner.nextLine();
 
         // if check 1, age 10 and under
@@ -40,9 +45,32 @@ public class Main {
         System.out.println("You owe this much: " + numFor.format(price));
         //print out if they got a toy
 
+//        if(extra.equals("toy")) {
+//            System.out.println("You got a toy!");
+//        } else if (extra.equals("sticker")) {
+//            System.out.println("You got a sticker!");
+//        } else if (extra.equals("advil")) {
+//            System.out.println("You got a advil!");
+//        } else {
+//            System.out.println("No extra.");
+//        }
+
         switch (extra) {
             case "toy":
                 System.out.println("You got a toy!");
+                if (num == 1) {
+                    System.out.println(1);
+
+                    switch (age) {
+                        case 3:
+                            System.out.println("You are a toddler");
+                            break;
+                        default:
+                            System.out.println("NaN");
+                            break;
+                    }
+
+                }
                 break;
             case "sticker":
                 System.out.println("You got a sticker!");
@@ -54,10 +82,5 @@ public class Main {
                 System.out.println("No extra.");
                 break;
         }
-//        if (hasToy) {
-//            System.out.println("And here is a free toy!");
-//        } else if (hasSticker) {
-//            System.out.println("And here is a free sticker!");
-//        }
     }
 }
